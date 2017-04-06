@@ -1,0 +1,33 @@
+{
+  "name": "elm_chamada",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+	"dependencies": {
+    "css-loader": "^0.28.0",
+    "elm-webpack-loader": "^4.3.0",
+    "file-loader": "^0.10.1",
+    "font-awesome": "^4.7.0",
+    "style-loader": "^0.16.1",
+    "tachyons": "^4.6.1",
+    "url-loader": "^0.5.8",
+    "webpack": "^1.14.0",
+    "webpack-dev-middleware": "^1.10.1",
+    "webpack-dev-server": "^1.16.3"
+  },
+  "devDependencies": {
+    "tachyons": "^4.6.1"
+  },
+	"scripts": {
+    "api": "node api.js",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "dev": "webpack-dev-server --port 3000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
