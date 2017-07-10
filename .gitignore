@@ -136,3 +136,8 @@ tags
 !.vscode/extensions.json
 
 # End of https://www.gitignore.io/api/elm,vim,node,linux,sublimetext,visualstudiocode
+
+
+# App
+
+dist/

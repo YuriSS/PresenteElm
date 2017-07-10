@@ -1,0 +1,28 @@
+{
+  "name": "testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "api": "node api.js",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "dev": "browser-sync start --proxy \"192.168.0.17:3030\" --files \"dist/*.js\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.18.12",
+    "css-loader": "^0.28.4",
+    "elm-webpack-loader": "^4.3.1",
+    "express": "^4.15.3",
+    "file-loader": "^0.11.2",
+    "style-loader": "^0.18.2",
+    "tachyons": "^4.7.4",
+    "url-loader": "^0.5.9",
+    "webpack": "^1.15.0",
+    "webpack-dev-middleware": "^1.11.0",
+    "webpack-dev-server": "^1.16.5"
+  }
+}
