@@ -30,7 +30,7 @@ renderHeaderCols xs =
     List.foldl
         (\ date acc ->
             List.append acc [ th [ class "fw6 bb b--black-20 tl pb3 pr3 bg-white" ] [ text date.day ] ] )
-        [ ( th [ class "fw6 bb b--black-20 tl pb3 pr3 bg-white" ] [ text "Name" ] ) ]
+        [ th [ class "fw6 bb b--black-20 tl pb3 pr3 bg-white" ] [ text "Name" ] ]
         ( Maybe.withDefault [] <| ( Maybe.map (\x -> x.dates) <| List.head xs )  )
 
 renderBody : List Student -> Html Msg
@@ -39,7 +39,7 @@ renderBody =
 
 renderStudent : Student -> Html Msg
 renderStudent x =
-    tr []
+    tr [ onClick <| Clicked x.user.name ]
         <| List.foldl
                 (\ date acc ->
                     List.append acc [ td [ class "pv3 pr3 bb b--black-2" ] [ renderPresence x.user date ] ] )

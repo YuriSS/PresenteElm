@@ -15,10 +15,10 @@ update msg model =
         
         BoardMsg subMsg ->
             let
-                ( updatedStudents, cmd ) =
-                    Board.Updates.update subMsg model.students
+                ( (updatedStudents, freshStudent), cmd ) =
+                    Board.Updates.update subMsg model.students model.user
             in
-                { model | students = updatedStudents } ! [ Cmd.map BoardMsg cmd ]
+                { model | students = updatedStudents, user = freshStudent } ! [ Cmd.map BoardMsg cmd ]
         
         FormMsg subMsg ->
             let

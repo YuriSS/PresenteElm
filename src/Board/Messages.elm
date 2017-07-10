@@ -11,6 +11,7 @@ type alias Day =
 type Msg
     = NoOp
     | ChangeStatus UserName Day
+    | Clicked String
 
 
 type Presence
